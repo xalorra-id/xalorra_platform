@@ -1,0 +1,38 @@
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from typing import List, Optional
+
+app = FastAPI(title="HITL Labeling API")
+
+class TextItem(BaseModel):
+    id: int
+    text: str
+
+class LabelItem(BaseModel):
+    id: int
+    text: str
+    auto_label: Optional[str] = None
+    human_label: Optional[str] = None
+
+# Simulasi database sederhana pakai dict
+db_labels = {}
+
+@app.post("/auto_label", response_model=List[LabelItem])
+async def auto_label_texts(items: List[TextItem]):
+    results = []
+    for item in items:
+        # Simulasi label otomatis, ganti dengan panggilan LLM asli
+        auto_label = f"auto_label_for_{item.id}"
+        db_labels[item.id] = {"auto_label": auto_label, "human_label": None, "text": item.text}
+        results.append(LabelItem(id=item.id, text=item.text, auto_label=auto_label))
+    return results
+
+@app.post("/human_label", response_model=LabelItem)
+async def human_label_correction(label: LabelItem):
+    if label.id not in db_labels:
+        raise HTTPException(status_code=404, detail="ID not found")
+    # Simpan label manual
+    db_labels[label.id]["human_label"] = label.human_label
+    return LabelItem(id=label.id, text=db_labels[label.id]["text"],
+                     auto_label=db_labels[label.id]["auto_label"],
+                     human_label=label.human_label)

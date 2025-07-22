@@ -1,0 +1,78 @@
+{
+  "home": {
+    "hero": {
+      "banner": "Introducing the Xalorra Whitepaper",
+      "title": "Lead with Intelligence",
+      "description": "Xalorra empowers developers and teams to build open, intelligent AI workflows—faster and together.",
+      "cta1": "Launch Studio",
+      "cta2": "Join Collab"
+    },
+    "features": {
+      "title": "All-in-One AI Studio",
+      "subtitle": "From Generative AI to Tabular ML in one open platform."
+    },
+    "bento": {
+      "sectionTitle": "Modular Workflow",
+      "sectionSubtitle": "Use only the tools you need, from dataset to deployment.",
+      "cards": [
+        {
+          "eyebrow": "Prompt Studio",
+          "title": "Customize with LLMs",
+          "description": "Engineer prompts, collaborate with teams, and manage multi-model setups."
+        },
+        {
+          "eyebrow": "API & Automation",
+          "title": "Deploy AI Anywhere",
+          "description": "Convert workflows into APIs, automate operations, and extend integrations."
+        },
+        {
+          "eyebrow": "Developer Experience",
+          "title": "Built for Builders",
+          "description": "Run pipelines from CLI to GUI. Shape our SDK and dev tools."
+        },
+        {
+          "eyebrow": "Hybrid AI",
+          "title": "LLM + Tabular",
+          "description": "Unite generative models with structured data using open frameworks."
+        },
+        {
+          "eyebrow": "Modular & Open",
+          "title": "Build Your Ecosystem",
+          "description": "Contribute extensions, fork pipelines, and grow the community."
+        }
+      ]
+    },
+    "dark": {
+      "sectionTitle": "Private & Secure",
+      "sectionSubtitle": "Deploy Xalorra on your own infrastructure or our managed cloud.",
+      "cards": [
+        {
+          "eyebrow": "Execution Engine",
+          "title": "From Prompt to Product",
+          "description": "Run workflows in real-time with observability and feedback."
+        },
+        {
+          "eyebrow": "Open Integration",
+          "title": "Bring Your Tools",
+          "description": "Use your models, datasets, and APIs. Extend with plugins."
+        },
+        {
+          "eyebrow": "Collaboration",
+          "title": "Open-Source Meets Teamwork",
+          "description": "Workspaces, access control, and forking for transparent dev."
+        },
+        {
+          "eyebrow": "Shared Roadmap",
+          "title": "You Propose. We Build.",
+          "description": "Vote, submit PRs, and help define what Xalorra becomes."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Join the AI Revolution",
+      "description": "Empower your team with open-source AI that adapts to you.",
+      "button1": "Explore GitLab",
+      "button2": "Try Aura GenAI"
+    }
+  }
+}

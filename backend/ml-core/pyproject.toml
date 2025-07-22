@@ -1,0 +1,24 @@
+[project]
+name = "xalorra-ml-core"
+version = "0.1.0"
+description = "Core ML library for Xalorra: train, evaluate, predict, AutoML"
+authors = [{ name = "Xalorra Team", email = "dev@xalorra.com" }]
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+  "scikit-learn",
+  "xgboost",
+  "pandas",
+  "numpy",
+  "joblib",
+  "tensorflow",
+  "click"
+]
+
+[project.scripts]
+xalorra = "xalorra_ml_core.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

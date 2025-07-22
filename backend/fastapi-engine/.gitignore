@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+*.sqlite3
+xgboost_model.json
+
+# Node/npm (kalau pakai di bot)
+node_modules/
+dist/
+npm-debug.log*
+
+# MacOS/Linux/IDE
+.DS_Store
+*.swp
+.idea/
+.vscode/

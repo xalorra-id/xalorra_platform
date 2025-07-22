@@ -1,0 +1,1 @@
+{"tenant": "tenant1", "filename": "sample_a3c101.csv", "model_path": "/opt/xalorra-discord/uploads/models/tenant1/sample_a3c101_1752724109.json", "accuracy": 0.2, "columns": ["feature1", "feature2", "class"], "trained_at": 1752724109.256871, "model_type": "classification"}

@@ -1,0 +1,78 @@
+{
+  "home": {
+    "hero": {
+      "banner": "Kenali Xalorra Whitepaper",
+      "title": "Pimpin dengan Kecerdasan",
+      "description": "Xalorra memberdayakan developer dan tim untuk membangun alur kerja AI terbuka yang cerdas—lebih cepat dan kolaboratif.",
+      "cta1": "Buka Studio",
+      "cta2": "Gabung Kolaborasi"
+    },
+    "features": {
+      "title": "AI Studio Serba Ada",
+      "subtitle": "Dari Generative AI hingga Tabular ML dalam satu platform terbuka."
+    },
+    "bento": {
+      "sectionTitle": "Alur Kerja Modular",
+      "sectionSubtitle": "Gunakan hanya alat yang kamu perlukan, dari data hingga deployment.",
+      "cards": [
+        {
+          "eyebrow": "Prompt Studio",
+          "title": "Kustomisasi dengan LLM",
+          "description": "Rekayasa prompt, kolaborasi dengan tim, dan kelola setup multi-model."
+        },
+        {
+          "eyebrow": "API & Otomatisasi",
+          "title": "Deploy AI di Mana Saja",
+          "description": "Ubah workflow menjadi API, otomatisasi operasi, dan perluas integrasi."
+        },
+        {
+          "eyebrow": "Pengalaman Developer",
+          "title": "Dibuat untuk Para Builder",
+          "description": "Jalankan pipeline dari CLI ke GUI. Bentuk SDK dan alat dev kami."
+        },
+        {
+          "eyebrow": "AI Hibrida",
+          "title": "LLM + Tabular",
+          "description": "Satukan model generatif dengan data terstruktur menggunakan framework terbuka."
+        },
+        {
+          "eyebrow": "Modular & Terbuka",
+          "title": "Bangun Ekosistemmu",
+          "description": "Kontribusi ekstensi, fork pipeline, dan kembangkan komunitas."
+        }
+      ]
+    },
+    "dark": {
+      "sectionTitle": "Privat & Aman",
+      "sectionSubtitle": "Deploy Xalorra di infrastrukturmu sendiri atau di cloud kami.",
+      "cards": [
+        {
+          "eyebrow": "Execution Engine",
+          "title": "Dari Prompt ke Produk",
+          "description": "Jalankan workflow secara real-time dengan observasi dan umpan balik."
+        },
+        {
+          "eyebrow": "Integrasi Terbuka",
+          "title": "Gunakan Alatmu Sendiri",
+          "description": "Gunakan model, dataset, dan API milikmu. Perluas dengan plugin."
+        },
+        {
+          "eyebrow": "Kolaborasi",
+          "title": "Open-Source Bertemu Tim",
+          "description": "Workspace, kontrol akses, dan forking untuk pengembangan transparan."
+        },
+        {
+          "eyebrow": "Roadmap Bersama",
+          "title": "Kamu Usulkan. Kami Bangun.",
+          "description": "Voting, kirim PR, dan bantu bentuk masa depan Xalorra."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Bergabung dalam Revolusi AI",
+      "description": "Berdayakan timmu dengan AI open-source yang fleksibel dan adaptif.",
+      "button1": "Lihat GitLab",
+      "button2": "Coba Aura GenAI"
+    }
+  }
+}

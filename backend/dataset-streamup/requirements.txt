@@ -1,0 +1,9 @@
+python-dotenv
+supabase
+aiofiles
+python-decouple
+uvicorn
+httpx
+PyJWT
+loguru
+xalorra-api-engine>=0.1.0

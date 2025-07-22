@@ -1,0 +1,29 @@
+{
+  "home": {
+    "hero": {
+      "title": "AI untuk Semua.",
+      "description": "Xalorra Foundation adalah proyek open-source global...",
+      "cta1": "Luncurkan Studio",
+      "cta2": "Jelajahi di GitLab",
+      "banner": "Baca Visi Kami →"
+    },
+    "features": {
+      "title": "Alat open-source untuk pengembangan AI nyata",
+      "subtitle": "Gratis digunakan, difork, dan dikembangkan — dengan fokus pada GenAI dan ML tabular."
+    },
+    "bento": {
+      "sectionTitle": "Dimulai dengan Mudah",
+      "sectionSubtitle": "Bangun aplikasi AI Anda sendiri tanpa kerumitan teknis"
+    },
+    "dark": {
+      "sectionTitle": "Kemampuan Lanjutan",
+      "sectionSubtitle": "Fitur AI yang fleksibel untuk pengembang dan peneliti"
+    },
+    "cta": {
+      "title": "Gabung dengan Komunitas",
+      "description": "Bantu kami membangun ekosistem AI terbuka",
+      "button1": "Gabung di GitLab",
+      "button2": "Coba Aura GenAI"
+    }
+  }
+}

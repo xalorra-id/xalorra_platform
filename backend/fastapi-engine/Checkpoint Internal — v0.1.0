@@ -1,0 +1,170 @@
+Berikut versi yang sudah **rapih, tersusun, dan siap dicatat sebagai milestone internal** Xalorra:
+
+---
+
+### 📍 **Checkpoint v0.1.1** — *(2025-07-10)*
+
+#### ✅ **Frontend Awal Siap**
+
+* Next.js + Tailwind berhasil di-setup via `npx create-next-app`
+* Struktur `apps/web` mengikuti pola App Router (`src/app`)
+* Halaman default dapat diakses melalui: [https://dev.xalorra.com](https://dev.xalorra.com)
+* Frontend dan backend masih **terpisah**, belum ada integrasi API langsung
+* Struktur makin **modular**: backend (Python), frontend (TypeScript)
+
+#### 🧠 **Fokus Selanjutnya**
+
+* Penguatan logika backend (`/train`, Supabase logging)
+* Integrasi command bot Discord (`/train`)
+* Tujuan: membangun **hybrid interface** (Web + Discord + API)
+
+---
+
+### 🏗️ **Progress: Multi-Tenant Isolation (Level 2)**
+
+#### ✅ **django-tenants Berhasil Terintegrasi**
+
+* Django multi-tenant schema-based berhasil diinstal dan dihubungkan ke project `xalorra-discord`
+* Struktur `tenants/` dan `core/` terpisah sesuai domain + schema
+
+#### ✅ **Tenant 1 (tenant1)**
+
+* Domain: `tenant1.103.164.54.246.nip.io`
+* Client aktif dan dikenali oleh middleware `TenantMiddleware`
+* Migrasi schema `tenant1` berhasil
+* Tabel `core_workspace` tersedia dan dapat di-query via:
+
+  ```python
+  from django_tenants.utils import schema_context
+  with schema_context('tenant1'):
+      Workspace.objects.count()
+  ```
+
+#### ✅ **Isolasi Schema Terbukti**
+
+* Akses `tenant2` tanpa migrasi → error:
+  `relation "core_workspace" does not exist`
+* 🔐 Artinya, antar tenant **terisolasi penuh**
+
+#### ✅ **Tes Endpoint**
+
+* Endpoint: `http://tenant1.103.164.54.246.nip.io/workspaces/`
+* CORS OK, JSON valid, dan hanya menampilkan data milik tenant1
+
+---
+
+### 🧩 **Milestone v0.2 — DONE**
+
+* ✅ Multi-Tenant Workspace dengan schema isolasi
+* ✅ URL routing dinamis berdasarkan host (nip.io)
+* ✅ Workspace CRUD per tenant
+* ✅ Endpoint `GET /workspaces/` per tenant
+
+---
+
+### 🔜 **Selanjutnya: v0.2.2 & v0.2.3**
+
+Untuk mendukung fitur utama AI per tenant:
+
+* 🚀 **v0.2.2** – Endpoint Dataset Upload (CSV)
+* 🤖 **v0.2.3** – Training Model (XGBoost, TensorFlow), penyimpanan metadata & evaluasi
+
+---
+
+Kalau sudah siap, kita lanjut ke:
+
+> **\[1] Buat model Dataset** per tenant, lalu
+> **\[2] Endpoint upload dan training.**
+Berikut update **📍Checkpoint v0.2.1** Xalorra yang **lengkap dan rapi**, termasuk semua progres yang tadi sudah kamu selesaikan:
+
+---
+
+### 📍 **Checkpoint v0.2.1** — *(2025-07-12)*
+
+#### ✅ **Multi-Tenant (Schema Isolation) Siap Produksi**
+
+* `django-tenants` berhasil terintegrasi
+* Struktur `tenants/`, `core/`, dan `uploads/` rapi dan modular
+* Tenant aktif: `tenant1` (`tenant1.127.0.0.1.nip.io`)
+* Middleware & URL routing dinamis berdasarkan hostname
+* Migrasi per tenant sukses → tabel `core_workspace`, `core_dataset`, `core_columnmetadata` otomatis terbentuk hanya untuk schema tenant
+* Tes isolasi: tenant2 error → validasi isolasi berhasil (`relation "core_workspace" does not exist`)
+
+#### ✅ **Model & Struktur DB**
+
+* Model `Workspace`, `Dataset`, dan `ColumnMetadata` selesai dan bekerja per tenant
+* Dataset menggunakan field `FileField` dengan path dinamis: `uploads/datasets/<schema>/<filename>`
+* Metadata kolom (`ColumnMetadata`) berhasil di-generate dan disimpan per tenant
+* Semua relasi memakai `related_name`, kompatibel dengan ORM Django & DRF
+
+#### ✅ **Endpoint Dataset Berfungsi Penuh**
+
+* `POST /api/datasets/` → upload CSV ke tenant (via `FileField`)
+* `GET /api/datasets/<id>/preview/` → menampilkan 5 baris pertama (preview)
+* `GET /api/datasets/<id>/columns/` → menampilkan metadata kolom (name, dtype, order)
+* Path file 100% sesuai skema (`uploads/datasets/tenant1/test_xyz.csv`)
+* Validasi backend: parsing CSV, ekstraksi kolom, pengurutan, dan penyimpanan metadata OK
+
+#### ✅ **Tes Manual via CLI dan cURL**
+
+* Upload file berhasil via:
+
+  ```bash
+  curl -X POST http://tenant1.127.0.0.1.nip.io:8888/api/datasets/ \
+    -F "file=@test.csv" \
+    -F "name=test.csv"
+  ```
+
+* Kolom metadata tervalidasi via:
+
+  ```bash
+  curl http://tenant1.127.0.0.1.nip.io:8888/api/datasets/4/columns/ | jq
+  ```
+
+#### ✅ **Validasi Data**:
+
+* File CSV valid:
+
+  ```
+  name,age,city
+  Alice,30,Jakarta
+  Bob,25,Bandung
+  ```
+
+* Output metadata:
+
+  ```json
+  {
+    "columns": [
+      { "name": "name", "dtype": "object", "order": 0 },
+      { "name": "age", "dtype": "object", "order": 1 },
+      { "name": "city", "dtype": "object", "order": 2 }
+    ]
+  }
+  ```
+
+---
+
+### 🎯 **Kesimpulan v0.2.1: SIAP LANJUT TRAINING**
+
+Fondasi backend multi-tenant sudah sangat kuat:
+
+* ✅ Skema terisolasi
+* ✅ Upload dataset rapi
+* ✅ Metadata siap untuk training
+
+---
+
+### 🔜 **Fase Selanjutnya**
+
+#### 🧠 **v0.2.2** – Training Model (Per Dataset per Tenant)
+
+* Endpoint: `POST /api/datasets/<id>/train/`
+* Gunakan XGBoost (klasifikasi awal)
+* Simpan evaluasi awal (accuracy, confusion matrix)
+
+#### 📊 **v0.2.3** – Evaluasi & Metadata Model
+
+* Simpan skor evaluasi, tanggal training, dan model path
+* Siapkan endpoint `GET /datasets/<id>/model/` untuk melihat status training
+

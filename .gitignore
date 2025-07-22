@@ -1,0 +1,50 @@
+
+---
+
+## ✅ `.gitignore` (root `xalorra_platform/.gitignore`)
+
+```gitignore
+# Node
+node_modules/
+.pnpm-debug.log
+.next/
+dist/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+env/
+venv/
+
+# VSCode / JetBrains
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env
+.env.*
+
+# Build & artifacts
+*.sqlite3
+*.db
+*.bak
+*.zip
+*.tar.gz
+
+# Local cache or temp
+.cache/
+__pypackages__/
+
+# Environment
+.env
+.env.*

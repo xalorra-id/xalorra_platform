@@ -1,0 +1,26 @@
+<!-- dashboard/frontend.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Xalorra Realtime Status</title>
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+<body>
+  <h1>Status Realtime</h1>
+  <ul id="log"></ul>
+
+  <script>
+    const socket = io("http://localhost:5000");
+
+    socket.on("connect", () => {
+      console.log("🔌 Connected to server");
+    });
+
+    socket.on("status_update", (data) => {
+      const el = document.createElement("li");
+      el.textContent = `🧠 ${data.task} → ${data.status}`;
+      document.getElementById("log").appendChild(el);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "home": {
+    "hero": {
+      "title": "AI for Everyone.",
+      "description": "Xalorra Foundation is a global open-source community building tools, workflows, and ecosystems for responsible AI.",
+      "cta1": "Launch Studio",
+      "cta2": "Explore on GitLab",
+      "banner": "AI for Everyone — Read Our Vision"
+    },
+    "features": {
+      "title": "Open-source tools for real-world AI development.",
+      "subtitle": "Free to use, fork, and improve — with a focus on GenAI and tabular ML."
+    },
+    "bento": {
+      "sectionTitle": "Community-led Projects",
+      "sectionSubtitle": "Modular systems for transparent and ethical AI."
+    },
+    "dark": {
+      "sectionTitle": "Foundation-first Infrastructure",
+      "sectionSubtitle": "Code, data, and collaboration — all open."
+    },
+    "cta": {
+      "title": "Join the Foundation. Build AI.",
+      "description": "Whether you're a backend engineer, prompt artist, researcher, or just curious — there's a place for you in the Xalorra community.",
+      "button1": "Join on GitLab",
+      "button2": "Try GenAI Demo"
+    }
+  }
+}

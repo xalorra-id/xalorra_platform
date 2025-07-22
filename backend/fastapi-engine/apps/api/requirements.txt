@@ -1,0 +1,29 @@
+# ⚙️ Core Web Frameworks
+fastapi
+uvicorn
+
+# 🌐 Django & Multi-Tenant
+django>=5.0
+django-tenants>=3.8
+
+# 🧠 Machine Learning
+pydantic>=2.0
+pandas>=2.0
+xgboost>=1.7
+scikit-learn>=1.3
+tensorflow>=2.13
+
+# 🔐 Auth & Security
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+
+# 🌍 Supabase Client (optional)
+supabase
+
+# 🧪 Dev & Testing Tools
+ipython
+httpx
+black
+ruff
+python-dotenv
+python-multipart

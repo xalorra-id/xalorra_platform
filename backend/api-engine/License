@@ -1,0 +1,44 @@
+Xalorra API_ENGINE License (XAL-IP-1.0)
+Copyright (c) 2025 Xalorra
+
+1. Hak Cipta & Kepemilikan
+Kode sumber ini adalah bagian dari sistem internal API_ENGINE, yang dikembangkan dan dimiliki secara eksklusif oleh Xalorra Foundation dan/atau Xalorra Inc. sebagai entitas hukum.
+
+Semua hak cipta dan kekayaan intelektual dalam kode ini dan turunannya tetap menjadi milik Xalorra, kecuali dinyatakan lain secara tertulis.
+
+2. Izin Penggunaan
+Penggunaan kode ini diperbolehkan dengan syarat:
+
+Hanya untuk penggunaan internal atau evaluasi oleh kontributor resmi Xalorra.
+
+Tidak boleh digunakan untuk komersialisasi, replikasi proyek serupa, atau redistribusi publik tanpa izin tertulis dari Xalorra.
+
+Kontribusi perubahan atau perbaikan wajib melalui sistem kolaborasi resmi (GitLab collab.xalorra.com).
+
+3. Batasan
+DILARANG:
+
+Menggunakan bagian dari kode ini untuk proyek proprietary atau closed-source lain di luar Xalorra.
+
+Menjual ulang, memodifikasi, atau mendistribusikan ulang dalam bentuk apapun tanpa izin.
+
+Menyalin arsitektur atau teknik internal untuk proyek pesaing.
+
+4. Kontribusi
+Setiap kontribusi kode ke dalam API_ENGINE akan dianggap sebagai kontribusi sukarela dan secara otomatis memberikan lisensi bebas royalti ke Xalorra untuk menggunakan, mengubah, dan mempublikasikan kontribusi tersebut.
+
+Kontributor tidak berhak menuntut kepemilikan atas bagian sistem ini, kecuali melalui perjanjian tertulis.
+
+5. Pertanggungjawaban
+Kode ini disediakan "apa adanya" tanpa jaminan dalam bentuk apapun, baik eksplisit maupun implisit.
+
+Xalorra tidak bertanggung jawab atas kerugian atau kerusakan yang timbul dari penggunaan kode ini.
+
+6. Ketentuan Tambahan
+Setiap pelanggaran terhadap lisensi ini dapat dikenakan pencabutan akses, tindakan hukum, dan/atau blacklist komunitas.
+
+Untuk penggunaan komersial atau kolaborasi berskala besar, silakan hubungi legal@xalorra.com.
+
+📎 Penutup
+Lisensi ini dirancang untuk melindungi nilai dan orisinalitas dari sistem internal API_ENGINE, sambil tetap mendorong kontribusi terbuka secara terarah dalam ekosistem Xalorra.
+
